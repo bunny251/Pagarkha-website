@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pagarkha - Step into Style</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Hero Video Banner -->
+  <div class="video-banner">
+    <video autoplay muted loop playsinline>
+      <source src="sneakerloop.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+  </div>
 
-<header class="glass tagline">
-  <p>Step into Style 👟✨</p>
-</header>
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" id="scrollIndicator">
+    <span></span>
+  </div>
 
-<section class="intro glass">
-  <h2>Welcome to Pagarkha!</h2>
-  <p>Your one-stop shop for stylish footwear and SneakerCoin payments.</p>
-  <a href="products.html" class="btn">Shop Now</a>
-</section>
+  <!-- Hero Content -->
+  <header class="glass">
+    <h1>PAGARKHA</h1>
+    <p class="tagline">Step into Style 👟</p>
+    <p>Welcome to Pagarkha! Your one-stop shop for stylish footwear and SneakerCoin payments.</p>
+    <a href="products.html" class="btn">Shop Now</a>
+  </header>
 
-  <footer>
-    <p>© 2025 Pagarkha. Powered by SneakerCoin.</p>
-  </footer>
+  <footer>&copy; 2025 Pagarkha. Powered by SneakerCoin.</footer>
+
+  <!-- JS for scroll indicator -->
+  <script>
+    window.addEventListener('scroll', function () {
+      const indicator = document.getElementById('scrollIndicator');
+      indicator.style.opacity = (window.scrollY > 100) ? '0' : '1';
+    });
+  </script>
 </body>
 </html>
