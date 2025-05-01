@@ -57,6 +57,7 @@ body::before {
   font-weight: bold;
   transition: all 0.3s ease;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  animation: bounceIn 0.8s ease forwards;
 }
 
 .explore-btn:hover {
@@ -180,3 +181,18 @@ body::before {
   0%, 100% { transform: translate(-50%, 0); }
   50%      { transform: translate(-50%, 10px); }
 }
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
