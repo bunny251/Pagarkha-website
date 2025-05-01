@@ -81,11 +81,10 @@ body {
 
 .video-banner video {
   width: 100%;
-  height: auto;
-  max-height: 100vh;
-  object-fit: contain; /* Shows the whole video */
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  margin: 0 auto;
 }
 
 .video-banner .overlay {
