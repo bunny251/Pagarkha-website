@@ -19,9 +19,13 @@ body::before {
 }
 .intro-section {
   padding: 60px 20px;
-  background: #fdfdfd;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   text-align: center;
-  color: #111;
+  color: #fff;
+  position: relative;
+  margin-top: -50px;
+  z-index: 2;
 }
 
 .intro-section h2 {
@@ -29,16 +33,33 @@ body::before {
   margin-bottom: 15px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #333;
 }
 
 .intro-section p {
   font-size: 1.1rem;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   line-height: 1.6;
-  font-weight: 400;
-  color: #555;
+  font-style: italic;
+}
+
+.explore-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #ff5c5c, #ff1f1f);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.explore-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff1f1f, #e60000);
 }
 
 .video-banner {
