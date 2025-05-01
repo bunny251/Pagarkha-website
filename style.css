@@ -11,15 +11,8 @@ body {
 
 .intro-section {
   padding: 60px 20px;
-  background: rgba(255, 255, 255, 0.2); /* Instead of 0.15 */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 20px;
   text-align: center;
-  color: #222;  /* readable on light background */
-  max-width: 900px;
-  margin: 60px auto;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  /* No background, blur, or borders here */
 }
 
 .intro-section h2 {
