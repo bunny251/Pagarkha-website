@@ -8,120 +8,94 @@
 }
 
 body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
   background: url('pagarkha-logo.png') no-repeat center center fixed;
   background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn 1s ease-out;
+  overflow-x: hidden;
 }
 
-/* Scroll Indicator */
-.scroll-indicator {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  animation: bounce 2s infinite;
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-.scroll-indicator span {
-  display: block;
-  width: 30px;
-  height: 30px;
-  border-bottom: 3px solid #555;
-  border-right: 3px solid #555;
-  transform: rotate(45deg);
-}
-
-/* Video Banner */
 .video-banner {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 20px;
-  margin: 0 auto;
   position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
 }
 
 .video-banner video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
-  border-radius: 20px;
-  display: block;
+  object-position: center;
 }
 
-/* Product Section */
-.products {
+.video-banner .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 1;
+}
+
+.glass {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px;
+  margin: -100px auto 20px;
   text-align: center;
-  padding: 60px 20px;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: fadeSlideIn 1s ease-out;
 }
 
-.products h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.product-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.product-card {
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
-  padding: 20px;
-  width: 250px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-}
-
-.product-card img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.product-card h3 {
+.tagline {
+  margin-top: 10px;
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  color: #222;
 }
 
-.product-card p {
-  color: #555;
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-}
-
-.product-card button {
+.btn {
+  display: inline-block;
+  margin-top: 20px;
   background: #000;
   color: #fff;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 6px;
-  cursor: not-allowed;
-  opacity: 0.6;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
 }
 
-/* Animations */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  animation: bounce 2s infinite;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 3px solid #333;
+  border-right: 3px solid #333;
+  transform: rotate(45deg);
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes bounce {
   0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, 12px); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  50%      { transform: translate(-50%, 10px); }
 }
