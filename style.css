@@ -267,6 +267,21 @@ body {
   pointer-events: none;
 }
 
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes slideOutLeft {
   100% {
     transform: translateX(-100%);
