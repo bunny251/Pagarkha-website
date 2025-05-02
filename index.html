@@ -90,5 +90,17 @@
   }
 </script>
 
+  <script>
+  function slideToProducts(event) {
+    event.preventDefault();
+    const homepage = document.getElementById('homepage');
+    homepage.classList.add('slide-out-left');
+
+    setTimeout(() => {
+      window.location.href = 'products.html';
+    }, 600); // duration matches animation time
+  }
+</script>
+
 </body>
 </html>
