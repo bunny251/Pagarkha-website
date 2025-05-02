@@ -1,53 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pagarkha Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagarkha | Products</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-  
 <body class="products-page">
-  <!-- Video Banner -->
-  <div class="video-banner">
-    <video autoplay muted loop playsinline>
-      <source src="20250430_1642_Sneaker Details Showcase_loop_01jt36bzw5ej0vhvt1hpw6242b.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
 
-  <!-- Scroll Indicator -->
-  <div class="scroll-indicator" id="scrollIndicator">
-    <span></span>
-  </div>
+  <header class="products-header">
+    <h1>Our Products</h1>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </header>
 
-  <!-- Product Section -->
-  <section class="products">
-    <h2>Our Collection</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/200x150" alt="Stylish Kicks" />
-        <h3>Stylish Kicks</h3>
-        <p>Coming Soon</p>
-        <button>Buy with SneakerCoin</button>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://via.placeholder.com/200x150" alt="Street Runners" />
-        <h3>Street Runners</h3>
-        <p>Coming Soon</p>
-        <button>Buy with SneakerCoin</button>
-      </div>
+  <main class="product-grid">
+    <div class="product-card">
+      <img src="https://img.icons8.com/color/160/nike.png" alt="Sneaker A" />
+      <h3>Sneaker A</h3>
+      <p>₹4,499</p>
     </div>
-  </section>
+    <div class="product-card">
+      <img src="https://img.icons8.com/color/160/adidas.png" alt="Sneaker B" />
+      <h3>Sneaker B</h3>
+      <p>₹5,199</p>
+    </div>
+    <div class="product-card">
+      <img src="https://img.icons8.com/color/160/new-balance.png" alt="Sneaker C" />
+      <h3>Sneaker C</h3>
+      <p>₹3,799</p>
+    </div>
+    <!-- Add more products here -->
+  </main>
 
-  <!-- Scroll Indicator Script -->
-  <script>
-    window.addEventListener('scroll', function () {
-      const indicator = document.getElementById('scrollIndicator');
-      indicator.style.opacity = (window.scrollY > 100) ? '0' : '1';
-    });
-  </script>
 </body>
 </html>
