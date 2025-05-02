@@ -18,12 +18,12 @@
     <div class="overlay"></div>
   </div>
 
-<section>
+<section class="intro-section" id="intro">
   <div class="intro-glass">
     <h2>Welcome to Pagarkha</h2>    <p>
       <em>The first e-commerce brand where streetwear meets technology. Discover exclusive high-style footwear collections and be the first to buy using cryptocurrency like <strong>SneakerCoin</strong>. Experience shopping redefined.</em>
     </p>
-    <a href="products.html" class="explore-btn">Explore Products</a>
+    <a href="#intro" class="explore-btn" onclick="animateIntro()">Explore Products</a>
   </div>
 </section>
 
@@ -62,5 +62,23 @@
       indicator.style.opacity = (window.scrollY > 100) ? '0' : '1';
     });
   </script>
+  
+  <script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('intro').scrollIntoView({ behavior: 'smooth' });
+    }, 3000); // delay in milliseconds (3 seconds)
+  });
+</script>
+
+  <script>
+  function animateIntro() {
+    const intro = document.getElementById('intro');
+    intro.classList.remove('slide-in'); // reset if already present
+    void intro.offsetWidth; // trigger reflow
+    intro.classList.add('slide-in');
+  }
+</script>
+
 </body>
 </html>
