@@ -94,15 +94,17 @@
     }, 600); // duration matches animation time
   }
 </script>
-
- <script>
-  // If the page is reloaded or visited again, reset the slide-out
+<script>
+  // Reset animation and apply slide-in on page show (return from back)
   window.addEventListener('pageshow', function () {
     const homepage = document.getElementById('homepage');
     if (homepage) {
-      homepage.classList.remove('slide-out-left');
+      homepage.classList.remove('slide-out-left'); // reset if applied
       homepage.style.transform = 'translateX(0)';
       homepage.style.opacity = '1';
+
+      // trigger slide-in
+      homepage.classList.add('slide-in-left');
     }
   });
 </script>
