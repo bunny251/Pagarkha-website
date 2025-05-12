@@ -479,12 +479,15 @@ body.products-page {
   color: #222;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .category-grid {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 30px;
   padding: 50px 20px;
+  background: #f7f7f7;
+  flex-wrap: wrap;
 }
 
 .video-card {
@@ -495,43 +498,49 @@ body.products-page {
   overflow: hidden;
   text-decoration: none;
   transition: transform 0.4s ease;
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: none;
+  border: none;
 }
 
 .video-card:hover {
   transform: scale(1.05);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.2));
 }
 
 .video-card video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top; /* Crop bottom watermark */
+  object-position: center center; /* No cropping at top or bottom */
   display: block;
-  filter: brightness(0.9) contrast(1.1);
+  border-radius: 20px;
+  filter: brightness(1);
 }
 
 .card-overlay {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 15px 10px;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
+  padding: 20px 10px;
+  background: rgba(255, 255, 255, 0.15); /* light transparent overlay */
+  backdrop-filter: blur(6px);
   color: #fff;
-  font-size: 1em;
-  font-weight: bold;
-  transition: background 0.3s ease;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-weight: 600;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.card-overlay h3 {
+  font-size: 1.1em;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .card-overlay p {
-  font-weight: normal;
   font-size: 0.85em;
-  margin-top: 5px;
+  font-weight: 400;
+  margin-top: 6px;
+  color: #eee;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
