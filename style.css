@@ -6,10 +6,10 @@ body {
   position: relative;
   color: #222;
   
-  background-image: 
-    url('pagarkha-logo.png'),
+  body.products-page {
+  background-image:
+    url('./pagarkha-logo.png'),
     url('https://www.transparenttextures.com/patterns/symphony.png');
-    
   background-repeat: no-repeat, repeat;
   background-position: center center, top left;
   background-size: 600px, auto;
