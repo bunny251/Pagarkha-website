@@ -5,7 +5,8 @@ body {
   overflow-x: hidden;
   position: relative;
   color: #222;
-  
+}
+
   body.products-page {
   background-image:
     url('./pagarkha-logo.png'),
