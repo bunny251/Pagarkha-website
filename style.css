@@ -7,9 +7,9 @@ body {
   color: #222;
 }
 
-  body.products-page {
+ body.products-page {
   background-image:
-    url('./pagarkha-logo.png'),
+    url('pagarkha-logo.png'),
     url('https://www.transparenttextures.com/patterns/symphony.png');
   background-repeat: no-repeat, repeat;
   background-position: center center, top left;
