@@ -11,6 +11,13 @@ body {
   color: #222;
 }
 
+.products-page {
+  background: url('pagarkha-logo.png') no-repeat center center fixed;
+  background-size: 600px;
+  background-color: #f9f9f9;
+  background-blend-mode: lighten;
+}
+
 .intro-section {
   padding: 60px 20px;
   text-align: center;
