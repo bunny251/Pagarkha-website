@@ -2,44 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pagarkha | Products</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
 </head>
 <body class="products-page">
 
+  <!-- Parallax background -->
+  <div class="parallax-bg"></div>
+
+  <!-- Header -->
   <header class="products-header">
-    <h1>Our Products</h1>
     <a href="index.html" class="back-btn">← Back to Home</a>
+    <h1>Our Products</h1>
   </header>
 
-<main class="category-section">
-  <h2>Discover Your Style</h2>
+  <!-- Main Content -->
+  <main class="category-section">
+    <h2>Discover Your Style</h2>
+    <div class="category-grid">
 
-<div class="category-grid">
-  <a href="mens.html" class="category-card video-card">
-    <video src="products_men.mp4" autoplay muted loop playsinline></video>
-    <div class="card-overlay">
-      <h3>Men’s Collection</h3>
-    </div>
-  </a>
+      <a href="mens.html" class="video-card">
+        <video src="products_men.mp4" autoplay muted loop playsinline></video>
+        <div class="card-overlay">
+          <h3>Men’s Collection</h3>
+          <p>Urban streetwear, sporty vibes, and sleek designs.</p>
+        </div>
+      </a>
 
-  <a href="womens.html" class="category-card video-card">
-    <video src="products_women.mp4" autoplay muted loop playsinline></video>
-    <div class="card-overlay">
-      <h3>Women’s Collection</h3>
-    </div>
-  </a>
+      <a href="womens.html" class="video-card">
+        <video src="products_women.mp4" autoplay muted loop playsinline></video>
+        <div class="card-overlay">
+          <h3>Women’s Collection</h3>
+          <p>Trendy comfort, bold colors, and modern elegance.</p>
+        </div>
+      </a>
 
-  <a href="kids.html" class="category-card video-card">
-    <video src="products_kids.mp4" autoplay muted loop playsinline></video>
-    <div class="card-overlay">
-      <h3>Kids’ Collection</h3>
+      <a href="kids.html" class="video-card">
+        <video src="products_kids.mp4" autoplay muted loop playsinline></video>
+        <div class="card-overlay">
+          <h3>Kids’ Collection</h3>
+          <p>Fun, vibrant styles made for tiny trendsetters.</p>
+        </div>
+      </a>
+
     </div>
-  </a>
-</div>
-</main>
+  </main>
+
+  <!-- Card reveal animation -->
+  <script>
+    const cards = document.querySelectorAll('.video-card');
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          card.classList.add('visible');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
 
 </body>
 </html>
