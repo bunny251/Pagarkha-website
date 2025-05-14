@@ -7,6 +7,9 @@ body {
   background: url('pagarkha-logo.png') no-repeat center center fixed;
   background-size: cover;
   color: #222;
+  background: url('https://www.transparenttextures.com/patterns/symphony.png') repeat;
+  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
 }
 
 .intro-section {
@@ -543,4 +546,10 @@ body.products-page {
   margin-top: 6px;
   color: #eee;
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #222;
 }
