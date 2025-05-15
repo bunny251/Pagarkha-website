@@ -12,6 +12,37 @@
   z-index: 1000;
 }
 
+.brand-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #222;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+.brand-name:hover {
+  color: #ff5c5c;
+  transform: scale(1.05);
+}
+
+.brand-name {
+  animation: fadeInBrand 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInBrand {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .logo {
   height: 40px;
 }
