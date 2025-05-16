@@ -44,7 +44,7 @@
     <h2>Discover Your Style</h2>
     <div class="category-grid">
 
-      <a href="mens.html" class="video-card">
+      <a href="mens.html" class="video-card animated-link" data-target="mens.html">
         <video src="products_men.mp4" autoplay muted loop playsinline></video>
         <div class="card-overlay">
           <h3>Men’s Collection</h3>
@@ -52,7 +52,7 @@
         </div>
       </a>
 
-      <a href="womens.html" class="video-card">
+      <a href="womens.html" class="video-card animated-link" data-target="womens.html">
         <video src="products_women.mp4" autoplay muted loop playsinline></video>
         <div class="card-overlay">
           <h3>Women’s Collection</h3>
@@ -60,7 +60,7 @@
         </div>
       </a>
 
-      <a href="kids.html" class="video-card">
+      <<a href="kids.html" class="video-card animated-link" data-target="kids.html">
         <video src="products_kids.mp4" autoplay muted loop playsinline></video>
         <div class="card-overlay">
           <h3>Kids’ Collection</h3>
@@ -88,6 +88,21 @@
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
   </script>
+  
+<script>
+  document.querySelectorAll('.animated-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = this.getAttribute('data-target');
 
+      this.classList.add('animated-exit');
+
+      setTimeout(() => {
+        window.location.href = target;
+      }, 500); // match animation duration
+    });
+  });
+</script>
+  
 </body>
 </html>
