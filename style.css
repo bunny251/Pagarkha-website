@@ -644,3 +644,18 @@ h1, h2 {
   font-weight: 600;
   color: #222;
 }
+
+.video-card.animated-exit {
+  animation: zoomFadeOut 0.5s ease forwards;
+}
+
+@keyframes zoomFadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+}
