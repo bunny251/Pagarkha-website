@@ -53,7 +53,7 @@
       </a>
 
       <a href="womens.html" class="video-card animated-link" data-target="womens.html">
-        <video src="products_women.mp4" autoplay muted loop playsinline></video>
+        <video id="womensVideo" src="products_women.mp4" autoplay muted loop playsinline></video>
         <div class="card-overlay">
           <h3>Women’s Collection</h3>
           <p>Trendy comfort, bold colors, and modern elegance.</p>
@@ -101,6 +101,17 @@
         window.location.href = target;
       }, 500); // match animation duration
     });
+  });
+</script>
+
+  <script>
+  window.addEventListener('pageshow', function(event) {
+    const womensVideo = document.getElementById('womensVideo');
+    if (womensVideo) {
+      womensVideo.pause();
+      womensVideo.currentTime = 0;
+      womensVideo.play();
+    }
   });
 </script>
   
