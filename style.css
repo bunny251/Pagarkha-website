@@ -87,7 +87,7 @@ body {
 }
 
 body.products-page {
-  background: url('product-bg.jpg') no-repeat center center fixed;
+  background: url('images/product-bg.jpg') no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
   background-color: #f7f7f7;
