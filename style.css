@@ -86,13 +86,24 @@ body {
   color: #222;
 }
 
- body.products-page {
+body.products-page {
+  background: url('product-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #f7f7f7;
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background-color: #f9f9f9;
-  color: #222;
+  min-height: 100vh;
   overflow-x: hidden;
-  position: relative;
+}
+
+.page-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: -1;
 }
 
 .parallax-bg {
