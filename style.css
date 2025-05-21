@@ -457,8 +457,8 @@ body.products-page {
 .products-header {
   text-align: center;
   padding: 60px 20px 20px;
-  background: linear-gradient(120deg, #fdfbfb, #ebedee);
-  border-bottom: 1px solid #ddd;
+  background: transparent; /* ✅ Remove gradient */
+  border-bottom: none;
   position: relative;
 }
 
@@ -523,22 +523,10 @@ body.products-page {
   transform: translateY(-8px);
 }
 
-.category-section {
-  text-align: center;
-  padding: 80px 20px;
-}
-
 .category-section h2 {
   font-size: 2.6rem;
   margin-bottom: 40px;
   font-weight: 700;
-}
-
-.category-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
 }
 
 .category-card {
