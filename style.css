@@ -587,7 +587,7 @@ body.products-page {
   justify-content: center;
   gap: 30px;
   padding: 50px 20px;
-  background: #f7f7f7;
+  background: transparent;
   flex-wrap: wrap;
 }
 
