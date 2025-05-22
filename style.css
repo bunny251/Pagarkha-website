@@ -78,6 +78,78 @@
   color: #333;
 }
 
+/* Base styles for all devices */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for devices with a maximum width of 768px (e.g., tablets and phones) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-center {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .video-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .video-card video {
+    height: auto;
+  }
+
+  .card-overlay h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-overlay p {
+    font-size: 0.9rem;
+  }
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Example using Flexbox */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Example using Grid for product cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
