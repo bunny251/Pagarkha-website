@@ -9,7 +9,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Navbar styling */
 .navbar {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -23,39 +22,26 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+  flex-wrap: wrap;
 }
 
 .brand-name {
-  font-size: 1.5rem;
-  color: #333333;
+  font-size: 1.8rem;
+  color: #333;
+  margin-right: 2rem; /* Adds spacing after PAGARKHA */
 }
 
 .nav-links {
   display: flex;
   gap: 1.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333333;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #ff6f61;
+  flex-wrap: wrap;
 }
 
 .nav-icons {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-.search-bar {
-  padding: 0.5rem;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
+  margin-left: 2rem; /* Adds spacing from nav-links */
 }
 
 .nav-icon {
@@ -63,26 +49,18 @@ body {
   cursor: pointer;
 }
 
-/* Hamburger menu - hidden on desktop */
+/* Make sure hamburger only shows on small screens */
 .hamburger {
   display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
-/* Responsive styling */
 @media (max-width: 768px) {
   .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
     flex-direction: column;
-    align-items: center;
     display: none;
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
   }
 
   .nav-links.active {
@@ -91,23 +69,16 @@ body {
 
   .hamburger {
     display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
-
-  .nav-right {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .search-bar {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .product-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
 
   .video-card {
     width: 100%;
